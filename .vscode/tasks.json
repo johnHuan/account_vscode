@@ -1,0 +1,34 @@
+{
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++:gcc.exe_label_main",
+			"command": "C:\\code\\install_package\\mingw64\\bin\\gcc.exe",			
+			"args": [
+				"-fdiagnostics-color=always",
+				"src/*.cpp",
+				"-g",
+				"${cwd}\\app\\*.cpp",
+				"-I",
+				"src",
+				"-lwinmm",
+				"-lws2_32",
+				"-o",
+				"${cwd}\\bin\\${fileBasenameNoExtension}.exe",
+				"-lstdc++"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "调试器生成的任务。"
+		}
+	],
+	"version": "2.0.0"
+}
